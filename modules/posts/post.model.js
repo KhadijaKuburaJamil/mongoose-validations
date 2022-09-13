@@ -11,7 +11,7 @@ const postSchema = new Schema({
     },
     published: {
         type: Boolean,
-        default:false
+        default: false
     },
 },
 {
