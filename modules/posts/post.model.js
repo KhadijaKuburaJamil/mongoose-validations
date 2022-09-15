@@ -7,12 +7,23 @@ const postSchema = new Schema({
     },
     body: {
         type: String,
-        required: true
+        required: true,
+        minLength: [10, "Minimum length for body must be three characters"],
     },
     published: {
         type: Boolean,
         default: false
     },
+    author:{
+        type: Schema.Types.ObjectId,
+        required: true,
+    },
+    likedBy: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "User",
+        }
+    ],
 },
 {
     timestamps:true,

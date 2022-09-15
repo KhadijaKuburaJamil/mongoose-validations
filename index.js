@@ -12,7 +12,7 @@ app.get("/", (req, res)=>{
 });
 
 app.use("/auth", authRouter);
-app.use("/post", postRouter);
+app.use("/posts", postRouter);
 
 async function start(){
     await dbConnect();
